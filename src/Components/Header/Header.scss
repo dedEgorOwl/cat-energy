@@ -1,0 +1,194 @@
+
+
+.header {
+    background-image: url('/imgs/index-background-desktop@1x.jpg');
+    background-size: 50% cover;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    @media only screen and (max-width: 1300px) {
+        background-image: none;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        background-image: url('/imgs/index-background-desktop@1x.jpg');
+        background-size: cover;
+        justify-content: flex-start;
+        background-position: center;
+    }
+    
+
+    .content {
+        width: 100%;
+        height: fit-content;
+        
+        @media only screen and (max-width: 1000px) {
+            margin: 0;
+        }
+
+        .top {
+            width: calc(100% - 280px);
+            height: fit-content;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0;
+            margin-left: 140px;
+            margin-right: 140px;
+
+            @media only screen and (max-width: 1000px) {
+                width: calc(100% - 80px);
+                background-color: white;
+                padding: 10px 40px;
+                margin: 0;
+            }
+
+            .menu {
+                display: none;
+                background-image: url('/icons/menu-outline.svg');
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+
+                @media only screen and (max-width: 1000px) {
+                    display: inline;
+                }
+            }
+
+            img {
+                height: 60px;
+            }
+
+            .navbar {
+                height: 100%;
+                display: flex;
+                gap: 30px;
+                color: white;
+                line-height: 25px;
+                font-size: 20px;
+                font-weight: 400;
+
+                @media only screen and (max-width: 1300px) {
+                    color: #111111;
+                }
+
+                @media only screen and (max-width: 1000px) {
+                    display: none;
+                }
+
+                .item {
+                    padding: 5px 0;
+                    cursor: pointer;
+                    border-bottom: 2px solid transparent;
+
+                    &:hover {
+                        height: calc(80% - 2px);
+                        border-color: white;
+                        color: rgba(255, 255, 255, 0.8);
+
+                        @media only screen and (max-width: 1300px) {
+                            color: #111111;
+                            border-color: #68B738;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            width: calc(100% - 280px);
+            display: flex;
+            color: #111111;
+            margin-left: 140px;
+            margin-right: 140px;
+
+            @media only screen and (max-width: 1300px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            @media only screen and (max-width: 1000px) {
+                width: calc(100% - 80px);
+                height: 300px;
+                color: white;
+                padding: 0 40px;
+                margin: 0;
+            }
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 40px;
+
+                @media only screen and (max-width: 1000px) {
+                    align-items: center;
+                }
+
+                h1 {
+                    font-size: 60px;
+                    line-height: 60px;
+                    font-weight: 400;
+                    
+
+                    @media only screen and (max-width: 1000px) {
+                        font-size: 36px;
+                        line-height: 36px;
+                        margin-top: 30px;
+                        text-align: center;
+                    }
+                }
+
+                h2 {
+                    font-size: 20px;
+                    line-height: 20px;
+                    font-weight: 400;
+
+                    @media only screen and (max-width: 1000px) {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+
+                button {
+                    width: fit-content;
+                    border: none;
+                    background-color: #68B738;
+                    padding: 15px 30px;
+                    font-size: 20px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    color: white;
+                    cursor: pointer;
+
+                    @media only screen and (max-width: 1000px) {
+                        background-color: white;
+                        color: #68B738;
+                        width: 100%;
+                    }
+
+                    &:hover {
+                        background-color: #5a9e30;
+                    }
+                }
+            }
+
+            img {
+
+                @media only screen and (max-width: 1300px) {
+                    position: relative;
+                    z-index: -1;
+                    bottom: 40px;
+                }
+
+                @media only screen and (max-width: 1000px) {
+                    z-index: 0;
+                    position: static;
+                    bottom: 0;
+                    height: 270px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

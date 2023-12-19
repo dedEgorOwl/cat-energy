@@ -1,0 +1,38 @@
+
+.footer {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #F2F2F2;
+
+    .container {
+        width: calc(100% - 280px);
+        display: flex;
+        justify-content: space-between;
+        margin-right: 140px;
+        margin-left: 140px;
+
+        @media only screen and (max-width: 1000px) {
+            width: calc(100% - 80px);
+            margin-left: 0;
+            margin-right: 0;
+            padding: 0 40px;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #444444;
+            cursor: pointer;
+
+            &:hover {
+                color: #65A93C;
+            }
+        }
+
+        img {
+            height: 24px;
+            cursor: pointer;
+        }
+    }
+}
